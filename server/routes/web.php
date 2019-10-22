@@ -12,7 +12,7 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    echo 'Hey, it\'s working!';
 });
 
 Route::get('/status', 'StatusController@getInfo');

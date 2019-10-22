@@ -11,6 +11,6 @@ class Log extends Eloquent
     protected $collection = 'serverlog';
     
     protected $fillable = [
-        'uri', 'uptime', 'count', 'last_request', 'last_ip'
+        'uri', 'method', 'uptime', 'count', 'last_request', 'last_ip'
     ];
 }

@@ -27,14 +27,18 @@ class LogRoutes
     private function logRequestInfo () {
 
         $uri = $_SERVER['REQUEST_URI'];
+        $method = $_SERVER['REQUEST_METHOD'];
         $upsince = Server::getUptimeInteger();
 
-        $log = Log::where('uri', '=', $uri)->where('uptime', '=', $upsince)->first();
+        $log = Log::where('uri', '=', $uri)
+                ->where('uptime', '=', $upsince)
+                ->where('method', '=', $method)->first();
 
         if (!$log) {
             $log = new Log();
             $log->uri = $uri;
             $log->uptime = $upsince;
+            $log->method = $method;
             $log->count = 1;
         }
         else {

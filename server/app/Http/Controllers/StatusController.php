@@ -22,7 +22,7 @@ class StatusController extends Controller
 
         $stats['requests'] = array_map(function ($log) {
             return array_filter($log, function($key){
-                return in_array($key, ["uri", "count", "last_request", "last_ip"]);
+                return in_array($key, ["uri", "method", "count", "last_request", "last_ip"]);
             }, ARRAY_FILTER_USE_KEY);
         }, $logs->toArray());
 
