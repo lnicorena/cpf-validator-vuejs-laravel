@@ -35,6 +35,30 @@ return [
 
     'connections' => [
 
+        'mongodb' => [
+            'driver' => 'mongodb',
+            'host' => env('DB_CONNECTION', 'localhost'),
+            'port' => env('DB_PORT', 27017),
+            'database' => env('DB_DATABASE'),
+            'username' => env('DB_USERNAME'),
+            'password' => env('DB_PASSWORD'),
+            'options' => [
+                'database' => env('DB_ADMIN_DATABASE', 'admin'),
+            ],
+        ],
+
+        'mongodb_local' => [
+            'driver' => 'mongodb',
+            'host' => env('DB_CONNECTION', 'localhost'),
+            'port' => env('DB_PORT', 27017),
+            'database' => 'local',
+            'username' => env('DB_USERNAME'),
+            'password' => env('DB_PASSWORD'),
+            'options' => [
+                'database' => env('DB_ADMIN_DATABASE', 'admin'),
+            ],
+        ],
+
         'sqlite' => [
             'driver' => 'sqlite',
             'url' => env('DATABASE_URL'),
