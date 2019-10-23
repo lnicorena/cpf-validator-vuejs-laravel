@@ -13,6 +13,14 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
+$api = app('Dingo\Api\Routing\Router');
+
+$api->version('v1', function ($api) {
+    $api->group(['middleware' => 'bindings'], function ($api) {
+
+        $api->get('/version', function () {
+            return ['version' => config('api.version')];
+        });
+        $api->resource('documents','\App\Http\Controllers\DocumentsController', ['except' => ['create', 'edit']]);
+    });
 });

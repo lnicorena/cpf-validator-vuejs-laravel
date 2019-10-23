@@ -7,10 +7,19 @@ use Illuminate\Http\Request;
 use App\Log;
 use App\Http\Helpers\Server;
 
-
+/**
+ * Server stats: uptime, requests info
+ *
+ * @Resource("Status", uri="/status")
+ */
 class StatusController extends Controller
 {
     
+    /**
+     * Display server information.
+     * 
+     * @Get("/")
+     */
     public function getInfo(Request $request)
     {
         
