@@ -1,8 +1,32 @@
-# cpf, cnpj - validator
+# Single Page Application with VueJS, Laravel and MongoDB.
 
-Single Page Application to manage and validate cpf, cnpj documents using VueJS, Laravel and MongoDB.
+Application to manage and validate cpf and cnpj documents.
 
-## Details
+###Frameworks and Libraries
+
+- Laravel 5.8
+- MongoDB 4.2
+- Vue.js 2.6.x
+- Vue Router
+- Vuetify
+- axios
+- docker
+
+### Provides:
+
+- Single Page Application
+- REST API
+- CPF/CNPJ validation
+- CRUD of document numbers
+- MongoDB storage
+- Pagination
+- Sorting by columns
+- Search/filter
+
+![alt tag](https://raw.githubusercontent.com/lnicorena/doc-validator-vuejs-laravel-mongo/master/screenshot.png)
+
+
+## App Details:
 
 Application: `http://localhost:8080/`
 
@@ -58,10 +82,10 @@ yarn build
 
 yarn test:unit
 
-### Run your end-to-end tests
+#### Run your end-to-end tests
 
 yarn test:e2e
 
-### Lints and fixes files
+#### Lints and fixes files
 
 yarn lint
