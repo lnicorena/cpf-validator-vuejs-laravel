@@ -2,7 +2,7 @@
 
 Application to manage and validate cpf and cnpj documents.
 
-###Frameworks and Libraries
+### Frameworks and Libraries
 
 - Laravel 5.8
 - MongoDB 4.2
@@ -48,19 +48,27 @@ Go in the `./server` directory and
 
 #### Create the `.env` file:
 
-\$ cp .env.example .env
+```
+cp .env.example .env
+```
 
 #### Install the laravel dependencies:
 
-\$ composer install --ignore-platform-reqs
+```
+composer install --ignore-platform-reqs
+```
 
 #### Generate Laravel keys:
 
-\$ php artisan key:generate
+```
+php artisan key:generate
+```
 
 #### Compile and run the web and database server with docker:
 
-\$ docker-compose up -d --build
+```
+docker-compose up -d --build
+```
 
 ## Front-end
 
@@ -68,24 +76,36 @@ Go in the `./client` directory and run the follow commands:
 
 #### Setup the project:
 
+```
 yarn install
+```
 
 #### Compiles and hot-reloads for development
 
+```
 yarn serve
+```
 
 #### Compiles and minifies for production
 
+```
 yarn build
+```
 
 #### Run your unit tests
 
+```
 yarn test:unit
+```
 
 #### Run your end-to-end tests
 
+```
 yarn test:e2e
+```
 
 #### Lints and fixes files
 
+```
 yarn lint
+```
