@@ -87,7 +87,8 @@ export default {
             this.$api
                 .delete(`/documents/${id}`)
                 .then(result => console.log('document deleted', result))
-                .catch(error => console.log('error deleting document', error));
+                .catch(error => console.log('error deleting document', error))
+                .finally(() => this.loadDocuments());
         },
 
         closeDialog() {
