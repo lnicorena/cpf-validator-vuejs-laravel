@@ -94,9 +94,9 @@ export default {
         verifyDocument() {
             let valid = this.checkDocument(this.number);
             if (valid) {
-                this.message = 'The document number is valid! ';
+                this.message = 'The document number is valid!';
             } else {
-                this.message = 'The number you entered is not valid';
+                this.message = 'The number you entered is NOT valid!';
             }
             return valid;
         }
